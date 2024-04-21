@@ -1,0 +1,87 @@
+namespace = uis_magic_events
+
+# war wizard appears
+country_event = {
+	id = uis_magic_events.1
+	title = uis_magic_events.1.t
+	desc = uis_magic_events.1.d
+	picture = SPELL_LIST_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			has_idea_group = magocratic_ideas
+			magocratic_ideas = 5
+		}
+	}
+
+	option = {
+		name = uis_magic_events.1.1
+		ai_chance = { 
+			factor = 75
+			modifier = {
+				factor = 0
+				NOT = { mil_power = 200 }
+			}
+		}
+		add_years_of_income = -1
+		add_mil_power = -200
+		create_war_wizard_effect = yes
+		clr_country_flag = magical_tournament_held
+		
+	}
+	option = {
+		name = uis_magic_events.1.2
+		ai_chance = { 
+			factor = 25
+		}
+		clr_country_flag = magical_tournament_held
+	}
+}
+
+# Add Magical study bonus
+country_event = {
+	id = uis_magic_events.2
+	title = uis_magic_events.2.t
+	desc = uis_magic_events.2.d
+	hidden = yes
+	picture = POPE_PREACHING_eventPicture
+		
+	trigger = {
+		AND = {
+			has_idea_group = magocratic_ideas
+			magocratic_ideas = 2
+			NOT = { has_country_flag = magical_study_bonus }
+		}
+	}
+
+	option = {
+		name = "uis_magic_events.2.1"
+		set_country_flag = magical_study_bonus
+		change_variable = { which = experienceModifier value = 25 }
+	}
+}
+# Remove Magical study bonus
+country_event = {
+	id = uis_magic_events.3
+	title = uis_magic_events.3.t
+	desc = uis_magic_events.3.d
+	hidden = yes
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+		
+	trigger = {
+		AND = {
+			has_country_flag = magical_study_bonus
+			NOT = { magocratic_ideas = 2 }
+		}
+	}
+
+	option = {
+		name = "uis_magic_events.3.1"	
+		clr_country_flag = magical_study_bonus
+		subtract_variable = { which = experienceModifier value = 25 }
+	}
+}

@@ -1,0 +1,285 @@
+namespace = uis_ideagroups
+#######################################
+# Admin Ideas						  #
+#######################################
+
+# Centralization Ideas
+#######################################
+# Centralize country event chain
+# Shows intro to Centralization ideas mechanics, and sets a flag for it to not spam the player.
+country_event = {
+	id = uis_ideagroups.0001
+	title = uis_ideagroups.0001.t
+	desc = uis_ideagroups.0001.d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		has_idea_group = centralization_ideas
+		NOT = { has_country_flag = had_cent_intro }
+	}
+
+	immediate = {
+		set_country_flag = had_cent_intro
+	}
+
+	option = {
+		name = uis_ideagroups.0001.a
+		ai_chance = { factor = 100 }
+	}
+}
+# Removes had_cent_intro flag, so if the player picks the ideagroup again they will get the intro again.
+# Also removes any bonuses left if idea group is abandoned.
+country_event = {
+	id = uis_ideagroups.0002
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_idea_group = centralization_ideas }
+		has_country_flag = had_cent_intro
+	}
+
+	immediate = {
+		clr_country_flag = had_cent_intro
+		clear_centralization_bonus_modifiers = yes
+	}
+
+	option = {
+		name = uis_ideagroups.0002.a
+		ai_chance = { factor = 100 }
+	}
+}
+# Adds the extra bonuses if the country has invested enough into centralization and is under required amount of provs.
+country_event = {
+	id = uis_ideagroups.0003
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			# If you have the age modifier, but either need to upgrade or doesn't have the bonuses.
+			AND = {
+				OR = {
+					has_country_modifier = discovery_cent_counter
+					has_country_modifier = reformation_cent_counter
+					has_country_modifier = absolutism_cent_counter
+					has_country_modifier = revolutions_cent_counter
+				}
+				OR = {
+					# If you don't have the bonuses.
+					NOT = {
+						OR = {
+							has_country_modifier = cent_bonuses_1
+							has_country_modifier = cent_bonuses_2
+							has_country_modifier = cent_bonuses_3
+							has_country_modifier = cent_bonuses_4
+						}
+					}
+					# If you have bonus tier 1 but can upgrade
+					AND = {
+						has_idea = cent_ideas_4
+						has_country_modifier = cent_bonuses_1
+					}
+					# If you have bonus tier 2 but can upgrade
+					AND = {
+						has_idea = cent_ideas_6
+						OR = {
+							has_country_modifier = cent_bonuses_1
+							has_country_modifier = cent_bonuses_2
+						}
+					}
+					# If you have bonus tier 3 but can upgrade
+					AND = {
+						full_idea_group = centralization_ideas
+						OR = {
+							has_country_modifier = cent_bonuses_1
+							has_country_modifier = cent_bonuses_2
+							has_country_modifier = cent_bonuses_3
+						}
+						
+					}
+				}
+			}
+			# If you have the bonuses but not the age modifiers.
+			AND = {
+				has_idea_group = centralization_ideas
+				NOT = {
+					OR = {
+						has_country_modifier = discovery_cent_counter
+						has_country_modifier = reformation_cent_counter
+						has_country_modifier = absolutism_cent_counter
+						has_country_modifier = revolutions_cent_counter
+					}
+				}
+				OR = {
+					has_country_modifier = cent_bonuses_1
+					has_country_modifier = cent_bonuses_2
+					has_country_modifier = cent_bonuses_3
+					has_country_modifier = cent_bonuses_4
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_country_modifier = discovery_cent_counter
+						has_country_modifier = reformation_cent_counter
+						has_country_modifier = absolutism_cent_counter
+						has_country_modifier = revolutions_cent_counter
+					}
+				}
+				OR = {
+					has_country_modifier = cent_bonuses_1
+					has_country_modifier = cent_bonuses_2
+					has_country_modifier = cent_bonuses_3
+					has_country_modifier = cent_bonuses_4
+				}
+			}
+			clear_centralization_bonus_modifiers = yes
+		}
+		if = {
+			limit = {
+				has_idea = cent_ideas_2
+				OR = {
+					has_country_modifier = discovery_cent_counter
+					has_country_modifier = reformation_cent_counter
+					has_country_modifier = absolutism_cent_counter
+					has_country_modifier = revolutions_cent_counter
+				}
+				NOT = {
+					OR = {
+						has_country_modifier = cent_bonuses_1
+						has_country_modifier = cent_bonuses_2
+						has_country_modifier = cent_bonuses_3
+						has_country_modifier = cent_bonuses_4
+					}
+				}
+			}
+			clear_centralization_bonus_modifiers = yes
+			add_country_modifier = { 
+				name = cent_bonuses_1
+				duration = -1
+				hidden = no
+			}
+		}
+		if = {
+			limit = {
+				has_idea = cent_ideas_4
+				OR = {
+					has_country_modifier = discovery_cent_counter
+					has_country_modifier = reformation_cent_counter
+					has_country_modifier = absolutism_cent_counter
+					has_country_modifier = revolutions_cent_counter
+				}
+				NOT = {
+					OR = {
+						has_country_modifier = cent_bonuses_2
+						has_country_modifier = cent_bonuses_3
+						has_country_modifier = cent_bonuses_4
+					}
+				}
+			}
+			clear_centralization_bonus_modifiers = yes
+			add_country_modifier = { 
+				name = cent_bonuses_2
+				duration = -1
+				hidden = no
+			}
+		}
+		if = {
+			limit = {
+				has_idea = cent_ideas_6
+				OR = {
+					has_country_modifier = discovery_cent_counter
+					has_country_modifier = reformation_cent_counter
+					has_country_modifier = absolutism_cent_counter
+					has_country_modifier = revolutions_cent_counter
+				}
+				NOT = {
+					OR = {
+						has_country_modifier = cent_bonuses_3
+						has_country_modifier = cent_bonuses_4
+					}
+				}
+			}
+			clear_centralization_bonus_modifiers = yes
+			add_country_modifier = { 
+				name = cent_bonuses_3
+				duration = -1
+				hidden = no
+			}
+		}
+		if = {
+			limit = {
+				full_idea_group = centralization_ideas
+				OR = {
+					has_country_modifier = discovery_cent_counter
+					has_country_modifier = reformation_cent_counter
+					has_country_modifier = absolutism_cent_counter
+					has_country_modifier = revolutions_cent_counter
+				}
+				NOT = {
+					OR = {
+						has_country_modifier = cent_bonuses_4
+					}
+				}
+			}
+			clear_centralization_bonus_modifiers = yes
+			add_country_modifier = { 
+				name = cent_bonuses_4
+				duration = -1
+				hidden = no
+			}
+		}
+	}
+
+	option = {
+		name = uis_ideagroups.0001.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#######################################
+# Diplo Ideas						  #
+#######################################
+
+# Maritime Ideas
+#######################################
+# Marine Corps
+# Adds and Removes Maritime Marine modifiers.
+country_event = {
+	id = uis_ideagroups.1001
+	hidden = yes
+	trigger = {
+		OR = {
+			full_idea_group = maritime_ideas
+			AND = {
+				NOT = {
+					full_idea_group = maritime_ideas
+				}
+				has_country_modifier = marine_corps
+			}
+		}
+	}
+	option = {
+		name = uis_ideagroups.1001.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { full_idea_group = maritime_ideas }
+			add_country_modifier = { 
+				name = marine_corps
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			remove_country_modifier = marine_corps
+		}
+	}
+}
+
+#######################################
+# Mil Ideas							  #
+#######################################

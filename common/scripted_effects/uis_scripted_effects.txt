@@ -1,0 +1,6 @@
+clear_centralization_bonus_modifiers = {
+	remove_country_modifier = cent_bonuses_1
+	remove_country_modifier = cent_bonuses_2
+	remove_country_modifier = cent_bonuses_3
+	remove_country_modifier = cent_bonuses_4
+}

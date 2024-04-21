@@ -1,0 +1,101 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+# Limit when in Age of Discovery
+discovery_cent_counter = {
+    potential = {
+		current_age = age_of_discovery
+        has_idea_group = centralization_ideas
+    }
+    trigger = {
+        custom_trigger_tooltip = {
+			tooltip = not_more_than_discovery_provinces
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 11
+				}
+			}
+		}
+    }
+	legitimacy = 0.2
+	devotion = 0.2
+	horde_unity = 0.2
+	meritocracy = 0.2
+	republican_tradition = 0.05
+}
+# Limit when in Age of Reformation
+reformation_cent_counter = {
+    potential = {
+		current_age = age_of_reformation
+        has_idea_group = centralization_ideas
+    }
+    trigger = {
+        custom_trigger_tooltip = {
+			tooltip = not_more_than_reformation_provinces
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 22
+					}
+				}
+			}
+		}
+    }
+	legitimacy = 0.30
+	devotion = 0.30
+	horde_unity = 0.30
+	meritocracy = 0.30
+	republican_tradition = 0.10
+}
+# Limit when in Age of Absolutism
+absolutism_cent_counter = {
+    potential = {
+		current_age = age_of_absolutism
+        has_idea_group = centralization_ideas
+    }
+    trigger = {
+        custom_trigger_tooltip = {
+			tooltip = not_more_than_absolutism_provinces
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 33
+					}
+				}
+			}
+		}
+    }
+	legitimacy = 0.5
+	devotion = 0.5
+	horde_unity = 0.5
+	meritocracy = 0.5
+	republican_tradition = 0.15
+	yearly_absolutism = 0.01
+}
+# Limit when in Age of Revolutions
+revolutions_cent_counter = {
+    potential = {
+		current_age = age_of_revolutions
+        has_idea_group = centralization_ideas
+    }
+    trigger = {
+        custom_trigger_tooltip = {
+			tooltip = not_more_than_revolutions_provinces
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 44
+					}
+				}
+			}
+		}
+    }
+	legitimacy = 0.75
+	devotion = 0.75
+	horde_unity = 0.75
+	meritocracy = 0.75
+	republican_tradition = 0.20
+	yearly_absolutism = 0.02
+}

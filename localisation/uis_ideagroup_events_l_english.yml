@@ -1,0 +1,13 @@
+﻿l_english:
+ uis_magic_events.1.t:0 "A War Wizard Appears"
+ uis_magic_events.1.d:0 "Any experienced general or tactician will say that magic is a potent force on the battlefield. A common mage can blast apart foes many times their size with evocation magic, block blades and gunfire with abjuration magic, and use unconventional tactics with illusion magic. All of this increases over tenfold with War Wizards, rare and unusually powerful mages who walk across battlefields as an unstoppable force of nature and can turn the tides of a battle by themselves. Today, one of these War Wizards has appeared before $MONARCH$, offering their services... but at a salary wildly out of proportion to anybody else in [Root.GetName]'s military."
+ uis_magic_events.1.1:0 "Pay them whatever they want!"
+ uis_magic_events.1.2:0 "No, our treasury does not serve the whims of a single man."
+
+ uis_ideagroups.0001.t:0 "Centralization ideas mechanics"
+ uis_ideagroups.0001.d:0 "This idea group comes with a special mechanic were if you stay under a certain limit of provinces you'll have access to some strong bonuses.\n\nThe amount of allowed provinces increases based on the current age.\nTo track your amount of provinces for the current age, look under triggered modifiers in the bottom right.\n\nAge of Discovery = 11\nAge of Reformation = 22\nAge of Absolutism = 33\nAge of Revolutions = 44\n"
+ uis_ideagroups.0001.a:0 "Understood"
+ not_more_than_discovery_provinces:0 "Owns less than §Y11§! provinces."
+ not_more_than_reformation_provinces:0 "Owns less than §Y22§! provinces."
+ not_more_than_absolutism_provinces:0 "Owns less than §Y33§! provinces."
+ not_more_than_revolutions_provinces:0 "Owns less than §Y44§! provinces."

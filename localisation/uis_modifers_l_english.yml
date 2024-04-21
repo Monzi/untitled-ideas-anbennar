@@ -1,0 +1,24 @@
+﻿l_english:
+# Event Modifiers
+ cent_bonuses_1:0 "Early Centralization"
+ desc_cent_bonuses_1:0 "This modifier is only active if you have less provinces than what's allowed for the current age."
+ cent_bonuses_2:0 "Partially Centralized"
+ desc_cent_bonuses_2:0 "This modifier is only active if you have less provinces than what's allowed for the current age."
+ cent_bonuses_3:0 "Mostly Centralized"
+ desc_cent_bonuses_3:0 "This modifier is only active if you have less provinces than what's allowed for the current age."
+ cent_bonuses_4:0 "Fully Centralized"
+ desc_cent_bonuses_4:0 "This modifier is only active if you have less provinces than what's allowed for the current age."
+# Military Event Modifiers
+# Triggered Quality Modifiiers for Maritime Idea group
+ marine_corps:0 "Marine corps"
+ desc_marine_corps:0 ""
+
+# Triggered Modifiers
+ discovery_cent_counter:0 "Centralized Government in the Age of Discovery"
+ desc_discovery_cent_counter:0 ""
+ reformation_cent_counter:0 "Centralized Government in the Age of Reformation"
+ desc_reformation_cent_counter:0 ""
+ absolutism_cent_counter:0 "Centralized Government in the Age of Absolutism"
+ desc_absolutism_cent_counter:0 ""
+ revolutions_cent_counter:0 "Centralized Government in the Age of Revolutions"
+ desc_revolutions_cent_counter:0 ""

@@ -1,4 +1,3 @@
 ﻿l_english:
- magical_tournament_held: "Held Magical Tournament"
- hold_magical_tournament_title: "Hold Magical Tournament"
- hold_magical_tournament_desc: "Hold a magical tournament to find a suitable mage to lead our armies.\nWe should be patient as this might take a while."
+ switch_tactics_title:0 "Change Current Tactics"
+ switch_tactics_desc:0 "It is time that we had a look at the tactics we're employing."

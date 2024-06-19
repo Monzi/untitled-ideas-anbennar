@@ -14,13 +14,16 @@
 # --------------------------------------------------------------
 
 # Nationalism
-cb_nationalist = {
+cb_early_nationalist = {
 
-	prerequisites = {
+	prerequisites_self = {
+		NOT = { dip_tech = 23 }
 		has_idea = nationalism_ideas_7
 		is_free_or_tributary_trigger = yes
-		culture_group_claim = FROM
 		is_revolutionary = no
+	}
+	prerequisites = {
+		culture_group_claim = FROM
 	}
 
 	war_goal = take_province_nationalist_early

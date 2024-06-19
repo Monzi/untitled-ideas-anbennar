@@ -1,0 +1,105 @@
+estate_academy = {
+	icon = 2
+
+	# If true, country will get estate
+	trigger = {	
+		full_idea_group = academy_ideas
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		war_exhaustion = -0.10
+		leader_cost = -0.10
+		free_leader_pool = 2
+		yearly_army_professionalism = 0.002
+	}
+	country_modifier_neutral = {
+		leader_cost = -0.10
+		free_leader_pool = 1
+		yearly_army_professionalism = 0.001
+	}	
+	country_modifier_angry = {
+		leader_cost = 0.10
+	}
+	land_ownership_modifier = {
+		academy_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			NOT = { development = 10 }
+		}
+		modifier = {
+			factor = 1.2
+			development = 10
+		}
+		modifier = {
+			factor = 1.5
+			development = 20
+		}
+		modifier = {
+			factor = 2
+			has_building = university
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 10
+	
+	influence_modifier = {
+		desc = EST_VAL_UNIVERSITY
+		trigger = {
+			any_owned_province = {
+				has_building = university
+			}
+		}
+		influence = 5
+	}
+	
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			has_any_estate_disaster_active = yes
+		}	
+		influence = -40
+	}
+	
+	# Loyalty modifiers
+	
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			has_any_estate_disaster_active = yes
+		}
+		loyalty = -20
+	}	
+	
+	# Custom Names
+	# Example
+	# custom_name = {
+	# 	desc = estate_magisters
+	# 	trigger = {
+	# 		has_estate_privilege = estate_mages_organization_magisterium
+	# 	}
+	# }
+
+	color = { 73 108 205 }
+
+	privileges = {
+		estate_academy_officer_graduation
+		estate_academy_fire_training
+		estate_academy_shock_training
+		estate_academy_maneuver_training
+		estate_academy_siege_training
+		estate_academy_advisors
+		estate_academy_lodges
+	}
+
+	agendas = {
+		estate_academy_hire_advisor
+		estate_academy_fire_advisor
+	}
+	influence_from_dev_modifier = 0.5
+}

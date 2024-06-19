@@ -52,9 +52,9 @@ take_province_nationalist_early = {
 	type = take_province
 	
 	attacker = {
-		badboy_factor = 0.8
+		badboy_factor = 0.7
 		prestige_factor = 1.0
-		peace_cost_factor = 0.75
+		peace_cost_factor = 0.7
 		
 		allowed_provinces = {
 			culture_group = ROOT
@@ -69,9 +69,9 @@ take_province_nationalist_early = {
 	}
 	
 	defender = {
-		badboy_factor = 0.8
+		badboy_factor = 0.7
 		prestige_factor = 1.0
-		peace_cost_factor = 0.75
+		peace_cost_factor = 0.7
 		
 		allowed_provinces = {
 			culture_group = FROM

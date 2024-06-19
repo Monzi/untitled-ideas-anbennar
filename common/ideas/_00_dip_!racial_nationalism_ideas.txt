@@ -1,0 +1,152 @@
+#### Admin Racial Ideas ####
+
+# Racial list:
+# Elven
+# Dwarven
+# Gnollish
+# Gnomish
+# Goblin
+# Half Elven - Not used
+# Half Orcish
+# Halfling
+# Harpy
+# Human
+# Kobold
+# Orcish
+# Ruinborn
+# Troll
+# Ogre
+# Centaur
+# Hobgoblin
+# Harimari
+# Lizardfolk
+
+# Nationalism
+# Add Anbennar stuff to this idea group...
+# elven_nat_ideas = {
+# 	category = DIP
+# 	trigger = {
+# 		#
+# 		OR = {
+# 			race = elven
+# 		}
+# 		NOT = {
+# 			has_idea_group = assimilation_ideas
+# 			OR = {
+# 				has_idea_group = dwarven_nat_ideas
+# 				has_idea_group = gnollish_nat_ideas
+# 				has_idea_group = gnomish_nat_ideas
+# 				has_idea_group = goblin_nat_ideas
+# 				has_idea_group = half_orcish_nat_ideas
+# 				has_idea_group = halfling_nat_ideas
+# 				has_idea_group = harpy_nat_ideas
+# 				has_idea_group = human_nat_ideas
+# 				has_idea_group = kobold_nat_ideas
+# 				has_idea_group = orcish_nat_ideas
+# 				has_idea_group = ruinborn_nat_ideas
+# 				has_idea_group = troll_nat_ideas
+# 				has_idea_group = ogre_nat_ideas
+# 				has_idea_group = centaur_nat_ideas
+# 				has_idea_group = hobgoblin_nat_ideas
+# 				has_idea_group = harimari_nat_ideas
+# 				has_idea_group = lizardfolk_nat_ideas
+# 			}
+# 		}
+# 	}
+
+# 	bonus = {
+		
+# 	}
+
+# 	nationalism_ideas_1 = {
+		
+# 	}
+# 	nationalism_ideas_2 = {
+		
+# 	}
+# 	nationalism_ideas_3 = {
+		
+# 	}
+# 	nationalism_ideas_4 = {
+		
+# 	}
+# 	nationalism_ideas_5 = {
+		
+# 	}
+# 	nationalism_ideas_6 = {
+		
+# 	}
+# 	nationalism_ideas_7 = {
+# 		# cb_early_nationalist = yes
+# 		# Gives an early and nerfed Nationalism CB.
+# 		province_warscore_cost = -0.1
+# 	}
+
+# 	ai_will_do = {
+# 		factor = 0.50
+
+# 		modifier = {
+# 			factor = 3
+# 			personality = ai_militarist
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			culture_group_claim = from
+# 		}
+# 	}
+# }
+
+# Nationalism
+# Add Anbennar stuff to this idea group...
+nationalism_ideas = {
+	category = DIP
+	trigger = {
+		NOT = {
+			has_idea_group = assimilation_ideas
+		}
+	}
+
+	bonus = {
+		culture_conversion_cost = -0.25
+		culture_conversion_time = -0.15
+		monthly_cultural_unity = 0.5
+	}
+
+	nationalism_ideas_1 = {
+		hostile_attrition = 1
+	}
+	nationalism_ideas_2 = {
+		manpower_in_culture_group_provinces = 0.10
+		same_culture_advisor_cost = -0.15
+	}
+	nationalism_ideas_3 = {
+		reinforce_cost_modifier = -0.2
+	}
+	nationalism_ideas_4 = {
+		years_of_nationalism = -5
+	}
+	nationalism_ideas_5 = {
+		land_morale = 0.1
+	}
+	nationalism_ideas_6 = {
+		global_autonomy = -0.05
+	}
+	nationalism_ideas_7 = {
+		# cb_early_nationalist = yes
+		# Gives an early and nerfed Nationalism CB.
+		province_warscore_cost = -0.1
+	}
+
+	ai_will_do = {
+		factor = 0.50
+
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			culture_group_claim = from
+		}
+	}
+}

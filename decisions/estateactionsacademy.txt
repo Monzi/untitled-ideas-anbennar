@@ -1,0 +1,44 @@
+country_decisions = {
+	estate_academy_officer_graduation = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = GRANT_GENERALSHIP_ACADEMY
+			}
+			has_estate = estate_academy
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_academy
+				loyalty = 30
+			}	
+			estate_influence = {
+				estate = estate_academy
+				influence = 40
+			}
+			estate_action_off_shared_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+				days = 3650
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = GRANT_GENERALSHIP_ACADEMY
+			}
+			increase_estate_action_counter = {
+				estate = estate_academy
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+	}
+}

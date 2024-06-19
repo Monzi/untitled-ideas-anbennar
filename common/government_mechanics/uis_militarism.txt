@@ -1,0 +1,181 @@
+militarism_ideas_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		has_dlc = "Domination"
+		full_idea_group = militarism_ideas
+	}
+
+	powers = {
+		militarism_ideas_mechanic = {
+			gui = prussian_militarization_gov_mech_3_power
+			show_before_interactions = yes
+			max = 100
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0.03
+			scaled_modifier = {
+				modifier = {
+					discipline = 0.05
+					manpower_recovery_speed = 0.15
+					land_maintenance_modifier = -0.2
+					monthly_militarism_ideas_mechanic = -0.5
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					full_idea_group = infantry_ideas
+				}
+				modifier = {
+					infantry_power = 0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					full_idea_group = cavalry_ideas
+				}
+				modifier = {
+					cavalry_power = 0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					full_idea_group = tactic_ideas
+					has_country_flag = fire_tactics_chosen
+				}
+				modifier = {
+					fire_damage = 0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					full_idea_group = tactic_ideas
+					has_country_flag = shock_tactics_chosen
+				}
+				modifier = {
+					shock_damage = 0.1
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		button1_militarism_ideas_mechanic = {
+			gui = prussian_militarization_gov_mech_3_interaction
+			icon = GFX_prussian_militarization_march_divided_fight_united
+			trigger = {
+				has_government_power = {
+					mechanic_type = militarism_ideas_mechanic
+					power_type = militarism_ideas_mechanic
+					value = 20
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = militarism_ideas_mechanic
+					power_type = militarism_ideas_mechanic
+					value = -20
+				}
+				add_country_modifier = {
+					name = pru_thunderous_advance_modifier
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 0
+					has_government_power = {
+						mechanic_type = militarism_ideas_mechanic
+						power_type = militarism_ideas_mechanic
+						value = 90
+					}
+				}
+				modifier = {
+					factor = 0
+					not = { mil_power = 500 }
+				}
+			}
+		}
+		
+		button2_militarism_ideas_mechanic = {
+			gui = prussian_militarization_gov_mech_3_interaction
+			icon = GFX_prussian_militarization_rewrite_military_manual
+			trigger = {
+				has_government_power = {
+					mechanic_type = militarism_ideas_mechanic
+					power_type = militarism_ideas_mechanic
+					value = 20
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = militarism_ideas_mechanic
+					power_type = militarism_ideas_mechanic
+					value = -20
+				}
+				add_country_modifier = {
+					name = pru_rewrite_military_manual_modifier
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			# ai_chance = {
+				# factor = 0
+				# modifier = {
+					# factor = 10
+					# not = {
+						# has_government_power = {
+							# mechanic_type = militarization_mechanic
+							# power_type = militarized_society
+							# value = 90
+						# }
+					# }
+					# mil_power = 500
+				# }
+			# }
+		}
+		boost_militarization_militarism_ideas_mechanic = {
+			gui = prussian_militarization_gov_mech_3_interaction
+			icon = GFX_prussian_militarization_upgrade	
+			trigger = {
+				mil_power = 50
+				not = {
+					has_government_power = {
+						mechanic_type = militarism_ideas_mechanic
+						power_type = militarism_ideas_mechanic
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = militarism_ideas_mechanic
+					power_type = militarism_ideas_mechanic
+					value = 10
+				}
+				add_mil_power = -50
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 0
+					has_government_power = {
+						mechanic_type = militarism_ideas_mechanic
+						power_type = militarism_ideas_mechanic
+						value = 90
+					}
+				}
+				modifier = {
+					factor = 0
+					not = { mil_power = 600 }
+				}
+				modifier = {
+					factor = 0
+					not = { mil = 4 }
+				}
+			}
+		}
+	}
+}

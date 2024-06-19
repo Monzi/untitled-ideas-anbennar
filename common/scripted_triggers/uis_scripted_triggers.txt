@@ -1,0 +1,61 @@
+# full_idea_group = 
+
+uis_num_of_completed_idea_groups_adm = {
+	calc_true_if = {
+		desc = num_of_completed_idea_groups_adm_tt
+		full_idea_group = innovativeness_ideas
+		full_idea_group = religious_ideas
+		full_idea_group = humanist_ideas
+		full_idea_group = economic_ideas
+		full_idea_group = industrial_ideas
+		full_idea_group = infrastructure_ideas
+		full_idea_group = expansion_ideas
+		full_idea_group = administrative_ideas
+		full_idea_group = centralization_ideas
+		full_idea_group = decentralization_ideas
+		amount = $amount$
+	}
+}
+
+uis_num_of_completed_idea_groups_dip = {
+	calc_true_if = {
+		desc = num_of_completed_idea_groups_dip_tt
+		full_idea_group = spy_ideas
+		full_idea_group = court_ideas
+		full_idea_group = magocratic_ideas
+		full_idea_group = diplomatic_ideas
+		full_idea_group = influence_ideas
+		full_idea_group = exploration_ideas
+		full_idea_group = assimilation_ideas
+		full_idea_group = nationalism_ideas
+		full_idea_group = trade_ideas
+		full_idea_group = maritime_ideas
+		full_idea_group = naval_ideas
+		amount = $amount$
+	}
+}
+
+uis_num_of_completed_idea_groups_mil = {
+	calc_true_if = {
+		desc = num_of_completed_idea_groups_mil_tt
+		full_idea_group = aristocracy_ideas
+		full_idea_group = plutocracy_ideas
+		full_idea_group = horde_gov_ideas
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = indigenous_ideas
+		full_idea_group = academy_ideas
+		full_idea_group = offensive_ideas
+		full_idea_group = defensive_ideas
+		full_idea_group = quality_ideas
+		full_idea_group = quantity_ideas
+		full_idea_group = infantry_ideas
+		full_idea_group = cavalry_ideas
+		full_idea_group = standingarmy_ideas
+		full_idea_group = mercenary_ideas
+		amount = $amount$
+	}
+}
+
+uis_num_of_completed_idea_groups_by_category = {
+	uis_num_of_completed_idea_groups_$type$ = { amount = $amount$ }
+}

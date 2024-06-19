@@ -8,11 +8,17 @@
  desc_cent_bonuses_3:0 "This modifier is only active if you have less provinces than what's allowed for the current age."
  cent_bonuses_4:0 "Fully Centralized"
  desc_cent_bonuses_4:0 "This modifier is only active if you have less provinces than what's allowed for the current age."
+
 # Military Event Modifiers
-# Triggered Quality Modifiiers for Maritime Idea group
+# Triggered Quality Modifiers for Maritime Idea group
  marine_corps:0 "Marine corps"
  desc_marine_corps:0 ""
 
+ fire_tactics:0 "Fire Tactics"
+ shock_tactics:0 "Shock Tactics"
+
+ desc_pru_rewrite_military_manual_modifier:0 ""
+ 
 # Triggered Modifiers
  discovery_cent_counter:0 "Centralized Government in the Age of Discovery"
  desc_discovery_cent_counter:0 ""

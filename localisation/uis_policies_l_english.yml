@@ -1,1 +1,36 @@
 ﻿l_english:
+# Admin Policies
+ tier1_adm:0 "Tier 1 Administrative Policy"
+ desc_tier1_adm:0 ""
+ tier2_adm:0 "Tier 2 Administrative Policy"
+ desc_tier2_adm:0 ""
+ tier3_adm:0 "Tier 3 Administrative Policy"
+ desc_tier3_adm:0 ""
+ tier4_adm:0 "Tier 4 Administrative Policy"
+ desc_tier4_adm:0 ""
+ tier5_adm:0 "Tier 5 Administrative Policy"
+ desc_tier5_adm:0 ""
+
+# Diplomatic Policies
+ tier1_dip:0 "Tier 1 Diplomatic Policy"
+ desc_tier1_dip:0 ""
+ tier2_dip:0 "Tier 2 Diplomatic Policy"
+ desc_tier2_dip:0 ""
+ tier3_dip:0 "Tier 3 Diplomatic Policy"
+ desc_tier3_dip:0 ""
+ tier4_dip:0 "Tier 4 Diplomatic Policy"
+ desc_tier4_dip:0 ""
+ tier5_dip:0 "Tier 5 Diplomatic Policy"
+ desc_tier5_dip:0 ""
+
+# Military Policies
+ tier1_mil:0 "Tier 1 Military Policy"
+ desc_tier1_mil:0 ""
+ tier2_mil:0 "Tier 2 Military Policy"
+ desc_tier2_mil:0 ""
+ tier3_mil:0 "Tier 3 Military Policy"
+ desc_tier3_mil:0 ""
+ tier4_mil:0 "Tier 4 Military Policy"
+ desc_tier4_mil:0 ""
+ tier5_mil:0 "Tier 5 Military Policy"
+ desc_tier5_mil:0 ""

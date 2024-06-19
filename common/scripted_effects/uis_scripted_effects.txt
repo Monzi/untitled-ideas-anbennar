@@ -4,3 +4,120 @@ clear_centralization_bonus_modifiers = {
 	remove_country_modifier = cent_bonuses_3
 	remove_country_modifier = cent_bonuses_4
 }
+
+estate_action_GRANT_GENERALSHIP_ACADEMY = {
+	if = {
+		limit = {
+			full_idea_group = innovativeness_ideas
+		}
+		create_general_scaling_with_tradition_and_pips = {
+			add_fire = 1
+			add_shock = 1
+			add_manuever = 1
+			add_siege = 1
+		}
+	}
+	else = {
+		create_leader_scaling_with_tradition = {
+			leader = general
+			type = army
+		}
+	}
+	#add_estate_influence_modifier = {
+	#	estate = estate_academy
+	#	desc = EST_VAL_GRANTED_GENERALSHIP
+	#	influence = 20
+	#	duration = 3650
+	#}
+	add_estate_loyalty = {
+		estate = estate_academy
+		loyalty = 10
+	}
+}
+
+# Temp until added back by Anbennar
+# A Specific case of the above
+create_general_scaling_with_tradition_and_pips = {
+	if = {
+		limit = {
+			army_tradition = 80
+		}
+		create_general_with_pips = {
+			tradition = 100
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 70
+		}
+		create_general_with_pips = {
+			tradition = 90
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 60
+		}
+		create_general_with_pips = {
+			tradition = 80
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 50
+		}
+		create_general_with_pips = {
+			tradition = 70
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 40
+		}
+		create_general_with_pips = {
+			tradition = 60
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 30
+		}
+		create_general_with_pips = {
+			tradition = 50
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else = {
+		create_general_with_pips = {
+			tradition = 40
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	custom_tooltip = create_leader_scaling_with_tradition_tt
+}

@@ -10,7 +10,7 @@ marine_corps = {
 
 # Modifiers for giving the bonuses from Centralization ideas.
 cent_bonuses_1 = {
-	same_culture_advisor_cost = -0.1
+	same_culture_advisor_cost = -0.05
 }
 cent_bonuses_2 = {
 	same_culture_advisor_cost = -0.1
@@ -19,11 +19,32 @@ cent_bonuses_2 = {
 cent_bonuses_3 = {
 	same_culture_advisor_cost = -0.15
 	development_cost = -0.20
+	global_manpower_modifier = 0.10
 	global_trade_goods_size_modifier = 0.05
 }
 cent_bonuses_4 = {
 	same_culture_advisor_cost = -0.15
 	development_cost = -0.25
+	global_manpower_modifier = 0.20
 	global_trade_goods_size_modifier = 0.10
 	global_allowed_num_of_buildings = 1
+}
+
+balanced_tactics = {
+	fire_damage = 0.05
+	shock_damage = 0.05
+	backrow_artillery_damage = 0.10
+	cavalry_flanking = 0.25
+}
+fire_tactics = {
+	fire_damage = 0.10
+	fire_damage_received = -0.05
+	artillery_levels_available_vs_fort = 1
+	backrow_artillery_damage = 0.15
+}
+shock_tactics = {
+	shock_damage = 0.10
+	shock_damage_received = -0.05
+	cav_to_inf_ratio = 0.10
+	cavalry_flanking = 0.35
 }

@@ -1,3 +1,5 @@
 ﻿l_english:
+ cb_early_nationalist:0 "Early Nationalism"
+ cb_early_nationalist_desc:0 "They hold provinces of our culture group."
  take_province_nationalist_early:0 "Take a province"
  take_province_nationalist_early_desc:0 "War goal is to take a province."

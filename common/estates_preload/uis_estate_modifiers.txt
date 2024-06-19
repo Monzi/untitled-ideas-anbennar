@@ -1,0 +1,25 @@
+#Define estate loyalty and influence modifiers here
+
+estate_academy = {
+	modifier_definition = {
+		type = loyalty
+		key = academy_loyalty_modifier
+		trigger = {
+			has_estate = estate_academy
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = academy_influence_modifier
+		trigger = {
+			has_estate = estate_academy
+		}
+	}
+	modifier_definition = {
+		type = privileges
+		key = academy_privilege_slots
+		trigger = {
+			has_estate = estate_academy
+		}
+	}
+}

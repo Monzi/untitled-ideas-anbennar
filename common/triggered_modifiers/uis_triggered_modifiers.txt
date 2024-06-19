@@ -13,9 +13,7 @@ discovery_cent_counter = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_discovery_provinces
 			NOT = {
-				num_of_owned_provinces_with = {
-					value = 11
-				}
+				num_of_cities = 12
 			}
 		}
     }
@@ -24,6 +22,7 @@ discovery_cent_counter = {
 	horde_unity = 0.2
 	meritocracy = 0.2
 	republican_tradition = 0.05
+	diplomatic_upkeep = 1
 }
 # Limit when in Age of Reformation
 reformation_cent_counter = {
@@ -34,20 +33,17 @@ reformation_cent_counter = {
     trigger = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_reformation_provinces
-			owner = {
-				NOT = {
-					num_of_owned_provinces_with = {
-						value = 22
-					}
-				}
+			NOT = {
+				num_of_cities = 23
 			}
 		}
-    }
+	}
 	legitimacy = 0.30
 	devotion = 0.30
 	horde_unity = 0.30
 	meritocracy = 0.30
 	republican_tradition = 0.10
+	diplomatic_upkeep = 2
 }
 # Limit when in Age of Absolutism
 absolutism_cent_counter = {
@@ -58,12 +54,8 @@ absolutism_cent_counter = {
     trigger = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_absolutism_provinces
-			owner = {
-				NOT = {
-					num_of_owned_provinces_with = {
-						value = 33
-					}
-				}
+			NOT = {
+				num_of_cities = 34
 			}
 		}
     }
@@ -73,6 +65,7 @@ absolutism_cent_counter = {
 	meritocracy = 0.5
 	republican_tradition = 0.15
 	yearly_absolutism = 0.01
+	diplomatic_upkeep = 3
 }
 # Limit when in Age of Revolutions
 revolutions_cent_counter = {
@@ -83,12 +76,8 @@ revolutions_cent_counter = {
     trigger = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_revolutions_provinces
-			owner = {
-				NOT = {
-					num_of_owned_provinces_with = {
-						value = 44
-					}
-				}
+			NOT = {
+				num_of_cities = 45
 			}
 		}
     }
@@ -98,4 +87,5 @@ revolutions_cent_counter = {
 	meritocracy = 0.75
 	republican_tradition = 0.20
 	yearly_absolutism = 0.02
+	diplomatic_upkeep = 4
 }

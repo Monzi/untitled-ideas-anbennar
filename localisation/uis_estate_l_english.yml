@@ -1,0 +1,35 @@
+﻿l_english:
+ estate_academy:0 "Academy"
+ estate_academy_desc:0 "This estate represents the Military Academies throughout our realm."
+ estate_academy_ownership:0 "Academy Land Ownership"
+ academy_loyalty_modifier:0 "Academy Loyalty Equilibrium"
+ academy_influence_modifier:0 "Academy Influence"
+ academy_privilege_slots:0 "Academy Max Privileges"
+
+# Agendas
+ estate_academy_hire_advisor:0 "Hire a Military Advisor"
+ estate_academy_hire_advisor_desc:0 "The [Root.GetAcademyName] desire the [Root.Monarch.GetTitle] to hire a new military advisor."
+ estate_academy_fire_advisor:0 "Fire our Military Advisor"
+ estate_academy_fire_advisor_desc:0 "[Root.Mil_Advisor.GetTitle] [Root.Mil_Advisor.GetName] has insulted the [Root.GetAcademyName]. They demand that we fire [Root.Mil_Advisor.GetHerHim]!"
+
+# Privileges
+ estate_academy_officer_graduation:0 "Service on Graduation"
+ estate_academy_officer_graduation_desc:0 "Generals in our army can only be of the finest caliber. We shall employ the finest officers directly from the academy."
+ estate_academy_fire_training:0 "Gunpowder Curriculum"
+ estate_academy_fire_training_desc:0 ""
+ estate_academy_shock_training:0 "Shock and Awe Curriculum"
+ estate_academy_shock_training_desc:0 ""
+ estate_academy_maneuver_training:0 "March of the Romans Curriculum"
+ estate_academy_maneuver_training_desc:0 ""
+ estate_academy_siege_training:0 "Guns of Urban Curriculum"
+ estate_academy_siege_training_desc:0 ""
+ estate_academy_advisors:0 "Academy Graduate Ministers"
+ estate_academy_advisors_desc:0 "In matters of war and strategy our graduates from our academies are unrivaled."
+
+# Special
+ enable_estate_action_GRANT_GENERALSHIP_ACADEMY_tt:0 "[Root.EnableEstateDecisionText] §Y[Root.GetAcademyName]: Grant Generalship§!"
+ disable_estate_action_GRANT_GENERALSHIP_ACADEMY_tt:0 "[Root.DisableEstateDecisionText] §Y[Root.GetAcademyName]: Grant Generalship§!"
+ has_enabled_estate_action_GRANT_GENERALSHIP_ACADEMY_tt:0 "[Root.HasEstateDecisionText] §Y[Root.GetAcademyName]: Grant Generalship§!"
+
+ estate_academy_officer_graduation_title:0 "[Root.GetAcademyName]: Grant Generalship"
+ estate_academy_officer_graduation_desc:0 "[Root.EstateDecisionDescription]"

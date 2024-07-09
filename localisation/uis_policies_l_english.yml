@@ -24,13 +24,5 @@
  desc_tier5_dip:0 ""
 
 # Military Policies
- tier1_mil:0 "Tier 1 Military Policy"
- desc_tier1_mil:0 ""
- tier2_mil:0 "Tier 2 Military Policy"
- desc_tier2_mil:0 ""
- tier3_mil:0 "Tier 3 Military Policy"
- desc_tier3_mil:0 ""
- tier4_mil:0 "Tier 4 Military Policy"
- desc_tier4_mil:0 ""
- tier5_mil:0 "Tier 5 Military Policy"
- desc_tier5_mil:0 ""
+ manpowerexchange_from_sailors:0 "Marines in the Army"
+ desc_manpowerexchange_from_sailors:0 "Exchange sailors for manpower decision."

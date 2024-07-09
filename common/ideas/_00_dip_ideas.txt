@@ -328,7 +328,7 @@ assimilation_ideas = {
 	bonus = {
 		harmonization_speed = 0.25
 		num_accepted_cultures = 8
-		ae_impact = -0.1
+		ae_impact = -0.10
 	}
 
 	assimilation_ideas_1 = {
@@ -753,6 +753,7 @@ maritime_ideas = {
 		free_leader_pool = 1
 	}
 	maritime_ideas_7 = {
+		# Impressment Offices gives 1% Marine fraction
 		# Allows Marine training decision
 		# Removes Marine Marine penalty
 		leader_naval_fire = 1

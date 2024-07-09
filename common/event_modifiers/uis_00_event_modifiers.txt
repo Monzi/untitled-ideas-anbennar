@@ -90,3 +90,10 @@ cavalry_fully_trained = {
 upgraded_stand_5 = {
 	force_march_free = yes
 }
+
+has_had_sailors_exchange_cooldown = {
+
+}
+gaining_manpower_from_sailors = {
+	manpower_recovery_speed = 0.75
+}

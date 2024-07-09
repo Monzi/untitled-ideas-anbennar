@@ -1,118 +1,20 @@
 #### Untitled Mil Policies ####
 
-tier1_mil = {
+manpowerexchange_from_sailors = {
 	monarch_power = MIL
 	
 	potential = {
-		always = yes
+		has_idea_group = nationalism_ideas
+		has_idea_group = quantity_ideas
 	}
 	
 	allow = {
-		uis_num_of_completed_idea_groups_by_category = {
-			type = mil
-			amount = 1
-		}
+		full_idea_group = nationalism_ideas
+		full_idea_group = quantity_ideas
 	}	
 	
-	army_tradition = 1
-	global_regiment_cost = -0.05
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-tier2_mil = {
-	monarch_power = MIL
-	
-	potential = {
-		always = yes
-	}
-	
-	allow = {
-		uis_num_of_completed_idea_groups_by_category = {
-			type = mil
-			amount = 2
-		}
-	}	
-	
-	yearly_army_professionalism = 0.002
-	morale_damage = 0.05
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-tier3_mil = {
-	monarch_power = MIL
-	
-	potential = {
-		always = yes
-	}
-	
-	allow = {
-		uis_num_of_completed_idea_groups_by_category = {
-			type = mil
-			amount = 3
-		}
-	}	
-	
-	land_morale = 0.10
-	monarch_military_power = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-tier4_mil = {
-	monarch_power = MIL
-	
-	potential = {
-		always = yes
-	}
-	
-	allow = {
-		uis_num_of_completed_idea_groups_by_category = {
-			type = mil
-			amount = 4
-		}
-	}	
-	
-	discipline = 0.05
-	artillery_levels_available_vs_fort = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-tier5_mil = {
-	monarch_power = MIL
-	
-	potential = {
-		always = yes
-	}
-	
-	allow = {
-		uis_num_of_completed_idea_groups_by_category = {
-			type = mil
-			amount = 5
-		}
-	}	
-	
-	global_manpower_modifier = 0.15
-	morale_damage_received = -0.05
-	backrow_artillery_damage = 0.20
+	global_manpower_modifier = 0.05
+	# May exchange sailors to manpower decision
 	
 	effect = {}
 	removed_effect = {}

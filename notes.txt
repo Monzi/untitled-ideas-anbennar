@@ -8,7 +8,6 @@ Govern: make ideas based on government rank
 DIP:
 
 Court: hold court, estate mage like mech.
-Assi: make it use the mughal mech.
 #### Ship: give sailors, less fraction
 #### heavy: barrage fort cost
 #### Mari: decision to exchange maximum manpower for sailors, possible upgrade path for marines

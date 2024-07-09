@@ -1,4 +1,29 @@
 country_decisions = {
+	exchange_sailors_to_manpower = {
+		color = { 47 84 164 }
+		potential = {
+			has_active_policy = manpowerexchange_from_sailors
+		}
+		allow = {
+			NOT = { has_country_modifier = has_had_sailors_exchange_cooldown }
+			has_active_policy = manpowerexchange_from_sailors
+			years_of_sailors = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = gaining_manpower_from_sailors
+				duration = 365
+			}
+			add_country_modifier = {
+				name = has_had_sailors_exchange_cooldown
+				duration = 1826
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
 	marine_upgrade = {
 		color = { 47 84 164 }
 		potential = {

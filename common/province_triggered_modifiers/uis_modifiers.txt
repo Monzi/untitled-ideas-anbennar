@@ -1,0 +1,15 @@
+marine_fraction_build = {
+	potential = {
+		owner = {
+			has_idea_group = maritime_ideas
+		}
+	}
+
+	trigger = {	
+		owner = {
+			full_idea_group = maritime_ideas
+		}
+	}
+
+	allowed_marine_fraction = 0.01
+}

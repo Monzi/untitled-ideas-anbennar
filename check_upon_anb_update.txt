@@ -4,3 +4,6 @@
 # MagicRuler.txt
 # MagicStudyEventsGood.txt
 # MagicProjectLichdom.txt
+# Buildings.txt
+# 06_government_reforms_common.txt
+# 00_governments.txt

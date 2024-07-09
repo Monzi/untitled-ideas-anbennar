@@ -6,15 +6,10 @@ clear_centralization_bonus_modifiers = {
 }
 
 clear_tactic_bonus_modifiers = {
-	remove_country_modifier = tier1_balanced_tactics
-	remove_country_modifier = tier1_fire_tactics
-	remove_country_modifier = tier1_shock_tactics
-	remove_country_modifier = tier2_balanced_tactics
-	remove_country_modifier = tier2_fire_tactics
-	remove_country_modifier = tier2_shock_tactics
-	remove_country_modifier = tier3_balanced_tactics
-	remove_country_modifier = tier3_fire_tactics
-	remove_country_modifier = tier3_shock_tactics
+	remove_country_modifier = balanced_tactics
+	remove_country_modifier = fire_tactics
+	remove_country_modifier = shock_tactics
+	remove_country_modifier = quantity_over_quality_tactics
 }
 
 clear_cavalry_bonus_modifiers = {

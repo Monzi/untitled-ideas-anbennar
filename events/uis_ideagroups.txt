@@ -264,49 +264,17 @@ country_event = {
 
 	option = { # Balanced tactics
 		name = uis_ideagroups.2001.a
-		if = {
-			limit = { full_idea_group = tactic_ideas }
-			add_country_modifier = {
-				name = tier3_balanced_tactics
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = { tactic_ideas = 6 }
-			add_country_modifier = {
-				name = tier2_balanced_tactics
-				duration = -1
-			}
-		}
-		else = {
-			add_country_modifier = {
-				name = tier1_balanced_tactics
-				duration = -1
-			}
+		add_country_modifier = {
+			name = balanced_tactics
+			duration = -1
 		}
 		ai_chance = { factor = 0 }
 	}
 	option = { # Fire tactics
 		name = uis_ideagroups.2001.b
-		if = {
-			limit = { full_idea_group = tactic_ideas }
-			add_country_modifier = {
-				name = tier3_fire_tactics
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = { tactic_ideas = 6 }
-			add_country_modifier = {
-				name = tier2_fire_tactics
-				duration = -1
-			}
-		}
-		else = {
-			add_country_modifier = {
-				name = tier1_fire_tactics
-				duration = -1
-			}
+		add_country_modifier = {
+			name = fire_tactics
+			duration = -1
 		}
 		ai_chance = {
 			factor = 25
@@ -332,25 +300,9 @@ country_event = {
 	}
 	option = { # Shock tactics
 		name = uis_ideagroups.2001.c
-		if = {
-			limit = { full_idea_group = tactic_ideas }
-			add_country_modifier = {
-				name = tier3_shock_tactics
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = { tactic_ideas = 6 }
-			add_country_modifier = {
-				name = tier2_shock_tactics
-				duration = -1
-			}
-		}
-		else = {
-			add_country_modifier = {
-				name = tier1_shock_tactics
-				duration = -1
-			}
+		add_country_modifier = {
+			name = shock_tactics
+			duration = -1
 		}
 		ai_chance = {
 			factor = 50
@@ -367,5 +319,41 @@ country_event = {
 			}
 		}
 		
+	}
+	option = { # Quantity over Quality tactics
+		name = uis_ideagroups.2001.d
+		add_country_modifier = {
+			name = quantity_over_quality_tactics
+			duration = -1
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				manpower_percentage	 = 0.10
+			}
+		}
+	}
+}
+
+# 
+country_event = {
+	id = uis_ideagroups.2002
+	hidden = yes
+	trigger = {
+		has_idea = stand_ideas_5
+		adm_tech = 15
+		NOT = { has_country_modifier = upgraded_stand_5 }
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = upgraded_stand_5
+			duration = -1
+		}
+	}
+
+	option = {
+		name = uis_ideagroups.2002.a
 	}
 }

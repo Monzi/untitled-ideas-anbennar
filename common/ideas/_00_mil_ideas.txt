@@ -157,72 +157,17 @@ tactic_ideas = {
 		land_attrition = -0.10
 	}
 	tactic_ideas5 = { # Hardend Combatents
-		# Allows tactic change decision
-		# Base:
 		fire_damage = 0.05
 		shock_damage = 0.05
-
-		# If Balanced:
-		# fire_damage = 0.05
-		# shock_damage = 0.05
-
-		# If Fire:
-		# fire_damage_received = -0.05
-		# fire_damage = 0.10
-
-		# If Shock:
-		# shock_damage_received = -0.05
-		# shock_damage = 0.10
-		effect = {
-			country_event = {
-				id = uis_ideagroups.2001
-			}
-		}
-		removed_effect = {
-			clear_tactic_bonus_modifiers = yes
-		}
 	}
 	tactic_ideas6 = { # Rapid Recovery
-		# Base:
 		recover_army_morale_speed = 0.10
-
-		# If Balanced:
-		# artillery_levels_available_vs_fort = 1
-		# movement_speed = 0.10
-
-		# If Fire:
-		# artillery_levels_available_vs_fort = 2
-
-		# If Shock:
-		# movement_speed = 0.20
-		effect = {
-			country_event = {
-				id = uis_ideagroups.2001
-			}
-		}
-		removed_effect = {
-			clear_tactic_bonus_modifiers = yes
-		}
 	}
 	tactic_ideas7 = { # Organized Rotations
-		# Base:
 		reserves_organisation = 0.10
-
-		# If Balanced:
-		# backrow_artillery_damage = 0.10
-		# morale_damage = 0.005
-
-		# If Fire:
-		# backrow_artillery_damage = 0.15
-
-		# If Shock:
-		# morale_damage = 0.015
 		# Anbennar
 		effect = {
 			increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes
-			country_event = {
-				id = uis_ideagroups.2001
-			}
 		}
 		removed_effect = {
 			decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes
@@ -267,6 +212,7 @@ offensive_ideas = {
 	category = MIL
 
 	bonus = {
+		assault_fort_cost_modifier = -0.50
 		recover_army_morale_speed = 0.1 #1.35
 		#qizilbash_loyalty_modifier = 0.1
 	}
@@ -286,7 +232,7 @@ offensive_ideas = {
 	}
 	engineer_corps = {
 		siege_ability = 0.20
-		garrison_damage = 0.25
+		assault_fort_ability = 0.33
 	}
 	grand_army = {
 		global_supply_limit_modifier = 0.10
@@ -369,8 +315,8 @@ defensive_ideas = {
 		fort_maintenance_modifier = -0.1
 	}
 	defensive_mentality = {
-		shock_damage_received = -0.05
-		fire_damage_received = -0.05
+		garrison_size = 0.50 #1.35
+		garrison_damage = 0.33
 		defensiveness = 0.25 #1.35
 	}
 	supply_trains = {
@@ -378,7 +324,7 @@ defensive_ideas = {
 		global_supply_limit_modifier = 0.15
 	}
 	improved_foraging = {
-		garrison_size = 0.33 #1.35
+		global_garrison_growth = 0.15
 		hostile_attrition = 1
 		# Anbennar
 		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
@@ -642,10 +588,14 @@ infantry_ideas = {
 		infantry_shock = 0.05
 	}
 	inf_ideas_7 = {
+		# Allows Infantry training decision
 		shock_damage_received = -0.05
 		# Anbennar
 		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
-		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
+		removed_effect = {
+			remove_country_modifier = hardened_infantry
+			decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes
+		}
 	}
 
 	ai_will_do = {
@@ -806,7 +756,11 @@ standingarmy_ideas = {
 	}
 	stand_ideas_5 = {
 		enable_forced_march = yes
-		movement_speed = 0.1
+		# After ADM Tech 15:
+		# force_march_free = yes
+		removed_effect = {
+			remove_country_modifier = upgraded_stand_5
+		}
 	}
 	stand_ideas_6 = {
 		army_tradition = 0.5

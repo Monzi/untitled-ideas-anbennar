@@ -1,5 +1,9 @@
 ﻿l_english:
+ marine_upgrade_title:0 "Landing War Games"
+ marine_upgrade_desc:0 "We should prepare our marines for naval landings in the future."
  switch_tactics_title:0 "Change Current Tactics"
  switch_tactics_desc:0 "It is time that we had a look at the tactics we're employing."
+ infantry_training_title:0 "Infantry Training"
+ infantry_training_desc:0 "Rigorously trained troops make for a proper fighting force."
  cavalry_training_title:0 "Cavalry Training"
  cavalry_training_desc:0 "Cohesion training for our cavalry to eleminate the need for infantry in our armies."

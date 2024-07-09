@@ -753,8 +753,8 @@ maritime_ideas = {
 		free_leader_pool = 1
 	}
 	maritime_ideas_7 = {
-		# marine_corps modifier
-		# shock_damage_received = -0.15 for marines only
+		# Allows Marine training decision
+		# Removes Marine Marine penalty
 		leader_naval_fire = 1
         leader_naval_shock = 1
 		# Anbennar
@@ -767,6 +767,7 @@ maritime_ideas = {
 			increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes
 		}
 		removed_effect = {
+			remove_country_modifier = upgraded_marines
 			remove_country_modifier = marine_corps
 			decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes
 		}
@@ -847,10 +848,11 @@ heavy_ideas = {
 	
 	bonus = {
 		has_man_of_war = yes
-		allowed_man_of_war_fraction = 1
+		allowed_man_of_war_fraction = 0.25
 	}
 
 	heavy_ideas1 = {
+		global_sailors_modifier = 0.20
 		heavy_ship_cost = -0.10
 		naval_attrition = -0.10
 	}
@@ -871,6 +873,7 @@ heavy_ideas = {
 	}
 	heavy_ideas7 = {
 		heavy_ship_number_of_cannons_modifier = 0.25
+		global_naval_barrage_cost = -0.50
 		# Anbennar
 		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
 		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
@@ -960,10 +963,11 @@ light_ideas = {
 	
 	bonus = {
 		has_voc_indiamen = yes
-		allowed_voc_indiamen_fraction = 1
+		allowed_voc_indiamen_fraction = 0.25
 	}
 
 	light_ideas1 = {
+		global_sailors_modifier = 0.20
 		light_ship_cost = -0.10
 		naval_attrition = -0.10
 	}
@@ -1073,10 +1077,11 @@ galley_ideas = {
 	
 	bonus = {
 		has_galleass = yes
-		allowed_galleass_fraction = 1
+		allowed_galleass_fraction = 0.25
 	}
 
 	galley_ideas1 = {
+		global_sailors_modifier = 0.20
 		galley_cost = -0.1
 		naval_attrition = -0.10
 	}

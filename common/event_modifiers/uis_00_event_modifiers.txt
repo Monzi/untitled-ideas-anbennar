@@ -3,12 +3,20 @@
 ##################################################################################################
 
 # Modifiers for Marines from Maritime ideas.
+upgraded_marines_cooldown = {
+	discipline = -0.05
+	is_marine_modifier = yes
+}
+upgraded_marines = {
+	landing_penalty = -1
+	is_marine_modifier = yes
+}
 marine_corps = {
-	shock_damage_received = -0.15
+	shock_damage_received = -0.10
 	is_marine_modifier = yes
 }
 
-# Modifiers for giving the bonuses from Centralization ideas.
+# Modifiers for idea groups.
 cent_bonuses_1 = {
 	same_culture_advisor_cost = -0.05
 }
@@ -30,63 +38,55 @@ cent_bonuses_4 = {
 	global_allowed_num_of_buildings = 1
 }
 
-tier1_balanced_tactics = {
-	fire_damage = 0.05
-	shock_damage = 0.05
+tactics_cooldown = {
 }
-tier1_fire_tactics = {
-	fire_damage = 0.10
-	fire_damage_received = -0.05
-}
-tier1_shock_tactics = {
-	shock_damage = 0.10
-	shock_damage_received = -0.05
-}
-
-tier2_balanced_tactics = {
-	fire_damage = 0.05
-	shock_damage = 0.05
-	artillery_levels_available_vs_fort = 1
-	movement_speed = 0.10
-}
-tier2_fire_tactics = {
-	fire_damage = 0.10
-	fire_damage_received = -0.05
-	artillery_levels_available_vs_fort = 2
-}
-tier2_shock_tactics = {
-	shock_damage = 0.10
-	shock_damage_received = -0.05
-	movement_speed = 0.20
-}
-
-tier3_balanced_tactics = {
+balanced_tactics = {
 	fire_damage = 0.05
 	shock_damage = 0.05
 	backrow_artillery_damage = 0.10
 	morale_damage = 0.005
 }
-tier3_fire_tactics = {
+fire_tactics = {
 	fire_damage = 0.10
 	fire_damage_received = -0.05
 	artillery_levels_available_vs_fort = 1
 	backrow_artillery_damage = 0.15
 }
-tier3_shock_tactics = {
+shock_tactics = {
 	shock_damage = 0.10
 	shock_damage_received = -0.05
 	movement_speed = 0.20
 	morale_damage = 0.015
 }
+quantity_over_quality_tactics = {
+	manpower_recovery_speed = 0.30
+	infantry_power = -0.1
+	cavalry_power = -0.1
+	artillery_power = -0.1
+}
 
+infantry_training_cooldown = {
+	infantry_power = -0.15
+}
+hardened_infantry = {
+	infantry_fire = 0.1
+	infantry_shock = 0.1
+}
+
+cavalry_training_cooldown = {
+	cavalry_power = -0.10
+	cavalry_flanking = -0.20
+}
 cavalry_partially_trained = {
 	cav_to_inf_ratio = 0.10
 }
-
 cavalry_mostly_trained = {
 	cav_to_inf_ratio = 0.20
 }
-
 cavalry_fully_trained = {
 	cav_to_inf_ratio = 0.30
+}
+
+upgraded_stand_5 = {
+	force_march_free = yes
 }

@@ -3,7 +3,4 @@
 # MagicEstate.txt
 # MagicRuler.txt
 # MagicStudyEventsGood.txt
-# 01_government_reforms_monarchies.txt
-# 02_government_reforms_republics.txt
-# 03_government_reforms_theocracies.txt
-# 00_governments.txt
+# MagicProjectLichdom.txt

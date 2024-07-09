@@ -6,17 +6,17 @@ country_decisions = {
 		}
 		allow = {
 			army_tradition = 15
-			full_idea_group = tactic_ideas
+			tactic_ideas = 5
 			NOT = { has_country_modifier = tactics_cooldown }
 		}
 		effect = {
 			add_army_tradition = -10
 			country_event = {
-				id = uis_ideagroups.2003
+				id = uis_ideagroups.2001
 			}
 			add_country_modifier = {
 				name = tactics_cooldown
-				duration = 3650
+				duration = 1826
 			}
 		}
 		ai_will_do = {
@@ -29,6 +29,58 @@ country_decisions = {
 				factor = 0
 				is_at_war = yes
 			}
+		}
+	}
+}
+
+country_decisions = {
+	cavalry_training = {
+		color = { 79 42 46 }
+		potential = {
+			full_idea_group = cavalry_ideas
+			NOT = { has_country_modifier = cavalry_fully_trained }
+		}
+		allow = {
+			army_tradition = 15
+			NOT = { has_country_modifier = cavalry_fully_trained }
+			NOT = { has_country_modifier = cavalry_training_cooldown }
+		}
+		effect = {
+			add_army_tradition = -10
+			if = {
+				limit = { has_country_modifier = cavalry_mostly_trained }
+				clear_cavalry_bonus_modifiers = yes
+				add_country_modifier = {
+					name = cavalry_fully_trained
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = { has_country_modifier = cavalry_partially_trained }
+				clear_cavalry_bonus_modifiers = yes
+				add_country_modifier = {
+					name = cavalry_mostly_trained
+					duration = -1
+				}
+				add_country_modifier = {
+					name = cavalry_training_cooldown
+					duration = 1826
+				}
+			}
+			else = {
+				clear_cavalry_bonus_modifiers = yes
+				add_country_modifier = {
+					name = cavalry_partially_trained
+					duration = -1
+				}
+				add_country_modifier = {
+					name = cavalry_training_cooldown
+					duration = 1826
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 }

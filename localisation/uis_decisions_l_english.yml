@@ -1,3 +1,5 @@
 ﻿l_english:
  switch_tactics_title:0 "Change Current Tactics"
  switch_tactics_desc:0 "It is time that we had a look at the tactics we're employing."
+ cavalry_training_title:0 "Cavalry Training"
+ cavalry_training_desc:0 "Cohesion training for our cavalry to eleminate the need for infantry in our armies."

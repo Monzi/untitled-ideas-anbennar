@@ -1,5 +1,22 @@
 ﻿l_english:
 # Admin Ideas
+ artificer_ideas:0 "Artificer Ideas"
+ artificer_ideas_bonus:0 "Full Artificery"
+ artificer_ideas1:0 ""
+ artificer_ideas1_desc:0 ""
+ artificer_ideas2:0 ""
+ artificer_ideas2_desc:0 ""
+ artificer_ideas3:0 ""
+ artificer_ideas3_desc:0 ""
+ artificer_ideas4:0 ""
+ artificer_ideas4_desc:0 ""
+ artificer_ideas5:0 ""
+ artificer_ideas5_desc:0 ""
+ artificer_ideas6:0 ""
+ artificer_ideas6_desc:0 ""
+ artificer_ideas7:0 ""
+ artificer_ideas7_desc:0 ""
+
  religious_ideas:0 "§JReligious Ideas§!"
 
  humanist_ideas:0 "§JHumanist Ideas§!"
@@ -126,7 +143,7 @@
  militarism_ideas6:0 "Legitimacy by Might"
  militarism_ideas6_desc:0 ""
  militarism_ideas7:0 "Strong Hold on Government"
- militarism_ideas7_desc:0 "\nAllows §YMilitarized State§! Reform"
+ militarism_ideas7_desc:0 ""
 
  tactic_ideas:0 "Tactic Ideas"
  tactic_ideas_bonus:0 "Tactical Warfare"

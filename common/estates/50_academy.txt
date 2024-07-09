@@ -88,13 +88,13 @@ estate_academy = {
 	color = { 73 108 205 }
 
 	privileges = {
+		estate_academy_right_of_counsel
 		estate_academy_officer_graduation
 		estate_academy_fire_training
 		estate_academy_shock_training
 		estate_academy_maneuver_training
 		estate_academy_siege_training
 		estate_academy_advisors
-		estate_academy_lodges
 	}
 
 	agendas = {

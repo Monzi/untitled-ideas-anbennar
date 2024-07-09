@@ -245,110 +245,68 @@ country_event = {
 # Diplo Ideas						  #
 #######################################
 
-# Maritime Ideas
-#######################################
-# Marine Corps
-# Adds and Removes Maritime Marine modifiers.
-country_event = {
-	id = uis_ideagroups.1001
-	hidden = yes
-	trigger = {
-		OR = {
-			full_idea_group = maritime_ideas
-			AND = {
-				NOT = {
-					full_idea_group = maritime_ideas
-				}
-				has_country_modifier = marine_corps
-			}
-		}
-	}
-	option = {
-		name = uis_ideagroups.1001.a
-		ai_chance = { factor = 100 }
-		if = {
-			limit = { full_idea_group = maritime_ideas }
-			add_country_modifier = { 
-				name = marine_corps
-				duration = -1
-				hidden = yes
-			}
-		}
-		else = {
-			remove_country_modifier = marine_corps
-		}
-	}
-}
+
 
 #######################################
 # Mil Ideas							  #
 #######################################
-# Gives intro for tactic ideas and gives a flag to keep track of event
+# Switch tactics event
 country_event = {
 	id = uis_ideagroups.2001
 	title = uis_ideagroups.2001.t
 	desc = uis_ideagroups.2001.d
 	picture = GENERALS_DISCUSSING_eventPicture
-	trigger = {
-		has_idea_group = tactic_ideas
-		NOT = { has_country_flag = had_tactic_intro }
-	}
-
-	immediate = {
-		set_country_flag = had_tactic_intro
-	}
-
-	option = {
-		name = uis_ideagroups.2001.a
-		ai_chance = { factor = 100 }
-	}
-}
-# Removes the flag set by event above
-country_event = {
-	id = uis_ideagroups.2002
-	hidden = yes
-	
-	trigger = {
-		NOT = { has_idea_group = tactic_ideas }
-		has_country_flag = had_tactic_intro
-	}
-
-	immediate = {
-		clr_country_flag = had_tactic_intro
-	}
-
-	option = {
-		name = uis_ideagroups.2002.a
-		ai_chance = { factor = 100 }
-	}
-}
-# Switch tactics event
-country_event = {
-	id = uis_ideagroups.2003
-	title = uis_ideagroups.2003.t
-	desc = uis_ideagroups.2003.d
-	picture = GENERALS_DISCUSSING_eventPicture
 	is_triggered_only = yes
 
 	immediate = {
-		remove_country_modifier = balanced_tactics
-		remove_country_modifier = fire_tactics
-		remove_country_modifier = shock_tactics
+		clear_tactic_bonus_modifiers = yes
 	}
 
 	option = { # Balanced tactics
 		name = uis_ideagroups.2001.a
-		add_country_modifier = {
-			name = balanced_tactics
-			duration = -1
+		if = {
+			limit = { full_idea_group = tactic_ideas }
+			add_country_modifier = {
+				name = tier3_balanced_tactics
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = { tactic_ideas = 6 }
+			add_country_modifier = {
+				name = tier2_balanced_tactics
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = tier1_balanced_tactics
+				duration = -1
+			}
 		}
 		ai_chance = { factor = 0 }
 	}
 	option = { # Fire tactics
 		name = uis_ideagroups.2001.b
-		add_country_modifier = {
-			name = fire_tactics
-			duration = -1
+		if = {
+			limit = { full_idea_group = tactic_ideas }
+			add_country_modifier = {
+				name = tier3_fire_tactics
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = { tactic_ideas = 6 }
+			add_country_modifier = {
+				name = tier2_fire_tactics
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = tier1_fire_tactics
+				duration = -1
+			}
 		}
 		ai_chance = {
 			factor = 25
@@ -374,9 +332,25 @@ country_event = {
 	}
 	option = { # Shock tactics
 		name = uis_ideagroups.2001.c
-		add_country_modifier = {
-			name = shock_tactics
-			duration = -1
+		if = {
+			limit = { full_idea_group = tactic_ideas }
+			add_country_modifier = {
+				name = tier3_shock_tactics
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = { tactic_ideas = 6 }
+			add_country_modifier = {
+				name = tier2_shock_tactics
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = tier1_shock_tactics
+				duration = -1
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -390,10 +364,6 @@ country_event = {
 			modifier = {
 				factor = 25
 				cavalry_fraction = 0.3
-			}
-			modifier = {
-				factor = 100
-				tag = PLC
 			}
 		}
 		

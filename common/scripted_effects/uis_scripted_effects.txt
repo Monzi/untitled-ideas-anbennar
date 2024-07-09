@@ -5,6 +5,24 @@ clear_centralization_bonus_modifiers = {
 	remove_country_modifier = cent_bonuses_4
 }
 
+clear_tactic_bonus_modifiers = {
+	remove_country_modifier = tier1_balanced_tactics
+	remove_country_modifier = tier1_fire_tactics
+	remove_country_modifier = tier1_shock_tactics
+	remove_country_modifier = tier2_balanced_tactics
+	remove_country_modifier = tier2_fire_tactics
+	remove_country_modifier = tier2_shock_tactics
+	remove_country_modifier = tier3_balanced_tactics
+	remove_country_modifier = tier3_fire_tactics
+	remove_country_modifier = tier3_shock_tactics
+}
+
+clear_cavalry_bonus_modifiers = {
+	remove_country_modifier = cavalry_partially_trained
+	remove_country_modifier = cavalry_mostly_trained
+	remove_country_modifier = cavalry_fully_trained
+}
+
 estate_action_GRANT_GENERALSHIP_ACADEMY = {
 	if = {
 		limit = {

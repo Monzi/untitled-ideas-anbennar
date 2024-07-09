@@ -1,0 +1,27 @@
+ADM:
+
+Cent: make it give bonuses to capital region
+Decent: make it give bonuses to territory
+
+
+DIP:
+
+Court: hold court, estate mage like mech.
+Assi: make it use the mughal mech.
+Ship: give sailors, less fraction
+heavy: barrage fort cost
+Mari: decision to exchange maximum manpower for sailors, possible upgrade path for marines
+
+
+MIL:
+
+Mili: make it so you can switch government type to become a junta ruled by the military
+Aca: make more privileges and make disaster so a junta can take power
+Off: replace garrison dmg. with assult fort ability, discount assult
+Def: give garrison bonuses
+Tac: quantity over quality, make it give bonuses at the end
+Qual: for each iron, copper or grain, give bonuses to inf, cannon, horse. (combat ability 0.2)
+Quan: button to draft manpower, gives 50% devastate all provinces
+Inf: train to get pips
+Cav: train to get more inf/ratio
+Stand: free forced march after adm 15

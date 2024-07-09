@@ -1,3 +1,26 @@
+estate_academy_right_of_counsel = {
+	icon = estate_nobles_GER_diploma_andreanum
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.05 }
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
 estate_academy_officer_graduation = {
 	icon = privilege_army_professionalism
 	loyalty = 0.05
@@ -35,8 +58,7 @@ estate_academy_fire_training = {
 	icon = privilege_infantry
 	loyalty = 0.0
 	influence = 0.05
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	max_absolutism = 0
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -55,8 +77,7 @@ estate_academy_shock_training = {
 	icon = privilege_spawn_rajput_regiments
 	loyalty = 0.0
 	influence = 0.05
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	max_absolutism = 0
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -75,8 +96,7 @@ estate_academy_maneuver_training = {
 	icon = privilege_discipline
 	loyalty = 0.0
 	influence = 0.05
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	max_absolutism = 0
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -95,8 +115,7 @@ estate_academy_siege_training = {
 	icon = privilege_artillery
 	loyalty = 0.0
 	influence = 0.05
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	max_absolutism = 0
 	is_valid = {
 		has_dlc = "Domination"
 	}
@@ -136,40 +155,6 @@ estate_academy_advisors = {
 		modifier = {
 			factor = 3
 			uses_meritocracy = yes
-		}
-	}
-}
-
-estate_academy_lodges = {
-	icon = privilege_royal_authority
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	loyalty = 0.05
-	is_valid = {
-		has_dlc = "Emperor"
-		OR = {
-			has_reform = militarism_ideas_monarchy
-			has_reform = militarism_ideas_republic
-			has_reform = militarism_ideas_theocratic
-		}
-	}
-	penalties = {
-		leader_cost = 0.10
-	}
-	conditional_modifier = {
-		modifier = {
-			monthly_militarism_ideas_mechanic = 0.06
-		}
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 10
-			has_dlc = "Rights of Man"
-		}
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
 		}
 	}
 }

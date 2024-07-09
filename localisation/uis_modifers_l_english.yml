@@ -14,11 +14,22 @@
  marine_corps:0 "Marine corps"
  desc_marine_corps:0 ""
 
- fire_tactics:0 "Fire Tactics"
- shock_tactics:0 "Shock Tactics"
+ tactics_cooldown:0 "Tactics Cooldown"
+ tier1_balanced_tactics:0 "Balanced Tactics"
+ tier1_fire_tactics:0 "Fire Tactics"
+ tier1_shock_tactics:0 "Shock Tactics"
+ tier2_balanced_tactics:0 "Balanced Tactics"
+ tier2_fire_tactics:0 "Fire Tactics"
+ tier2_shock_tactics:0 "Shock Tactics"
+ tier3_balanced_tactics:0 "Balanced Tactics"
+ tier3_fire_tactics:0 "Fire Tactics"
+ tier3_shock_tactics:0 "Shock Tactics"
 
- desc_pru_rewrite_military_manual_modifier:0 ""
- 
+ cavalry_training_cooldown:0 "Cavalry Training Cooldown"
+ cavalry_partially_trained:0 "Partially Trained Cavalry Force"
+ cavalry_mostly_trained:0 "Mostly Trained Cavalry Force"
+ cavalry_fully_trained:0 "Fully Trained Cavalry Force"
+
 # Triggered Modifiers
  discovery_cent_counter:0 "Centralized Government in the Age of Discovery"
  desc_discovery_cent_counter:0 ""
